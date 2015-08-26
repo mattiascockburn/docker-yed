@@ -14,3 +14,4 @@ RUN chmod +x /entrypoint.sh ;\
     mkdir /work && chown user /work
 ENV HOME /home/user
 USER user
+ENTRYPOINT /entrypoint.sh
