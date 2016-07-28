@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Mattias Giese <giese@b1-systems.de>
 ENV YED_VERSION 3.14.3
 RUN apt-get update ;\
