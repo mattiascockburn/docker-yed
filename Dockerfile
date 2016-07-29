@@ -1,11 +1,11 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Mattias Giese <giese@b1-systems.de>
-ENV YED_VERSION 3.14.3
+ENV YED_VERSION 3.16
 RUN apt-get update ;\
     apt-get -y dist-upgrade ;\
-    apt-get -y install unzip curl default-jre
+    apt-get -y install unzip wget default-jre
 
-RUN curl http://www.yworks.com/products/yed/demo/yEd-${YED_VERSION}.zip > /yed.zip ;\
+RUN wget --output-document=yed.zip http://www.yworks.com/products/yed/demo/yEd-${YED_VERSION}.zip && \
     unzip /yed.zip -d /opt/
 
 ADD ./entrypoint.sh /
