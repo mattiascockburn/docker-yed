@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER Mattias Giese <giese@b1-systems.de>
-ENV YED_VERSION 3.16
+ENV YED_VERSION 3.16.2.1
 RUN apt-get update ;\
     apt-get -y dist-upgrade ;\
     apt-get -y install unzip wget default-jre
