@@ -1,0 +1,9 @@
+#!/bin/sh
+ARGS=''
+if [ $# -ge 1 ]; then
+  ARGS="/work/$(basename $1)"
+  shift 1
+  ARGS="$@ $ARGS"
+fi
+
+java -jar "/usr/local/yed-${YED_VERSION}/yed.jar" $ARGS

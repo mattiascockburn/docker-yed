@@ -19,6 +19,8 @@ docker run \
   -v $HOME:/work \
   -e DISPLAY=unix$DISPLAY \
   -e XAUTHORITY=$XAUTH \
+  --entrypoint /bin/sh \
+  --user root \
   "$IMAGE" "$@"
 
 rm $XAUTH
