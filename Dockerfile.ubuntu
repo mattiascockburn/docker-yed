@@ -2,7 +2,8 @@ FROM ubuntu:16.04
 MAINTAINER Mattias Giese <mattiasgiese@posteo.net>
 ARG YED_VERSION=3.18.0.2
 ENV YED_VERSION ${YED_VERSION}
-ENTRYPOINT ["java", "-jar", "/opt/yed-$YED_VERSION/yed.jar"]
+COPY entrypoint /
+ENTRYPOINT ["/entrypoint"]
 
 # Add a PPA repo that provides Oracle Java.
 # Ref: <https://launchpad.net/~webupd8team/+archive/ubuntu/java>.
