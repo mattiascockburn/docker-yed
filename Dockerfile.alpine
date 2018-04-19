@@ -1,6 +1,6 @@
 FROM alpine:3.7
 LABEL maintainer Mattias Giese <mattiasgiese@posteo.net>
-ARG YED_VERSION=3.17.2
+ARG YED_VERSION=3.18.0.2
 ENV YED_VERSION ${YED_VERSION}
 ENV HOME /home/user
 ENV LANG C.UTF-8
